@@ -1,0 +1,18 @@
+groove
+pipeline {
+ agent any
+ stages {
+ stage('Build') {
+ steps {
+ echo 'Compiling Java code...'
+ sh 'javac Main.java'
+ }
+ }
+ stage('Test') {
+ steps {
+ echo 'Running tests...'
+ sh 'java Main'
+ }
+ }
+ }
+}
