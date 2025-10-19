@@ -1,0 +1,31 @@
+[Pipeline] Start of Pipeline
+[Pipeline] stage
+[Pipeline] { (Checkout)
+Cloning the repository...
+> git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/.git # timeout=10
+> git fetch --tags --progress -- https://github.com/yourusername/yourproject.git
++refs/heads/:refs/remotes/origin/
+> git checkout main
+[Pipeline] }
+[Pipeline] stage
+[Pipeline] { (Build)
+Building the project...
+[INFO] Scanning for projects...
+[INFO] BUILD SUCCESS
+[Pipeline] }
+[Pipeline] stage
+[Pipeline] { (Test)
+Running unit tests...
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+Publishing test results...
+Test reports published successfully.
+[Pipeline] }
+[Pipeline] stage
+[Pipeline] { (Post-Build Actions)
+Archiving artifacts...
+[Pipeline] }
+[Pipeline] End of Pipeline
+Compiling Java code...
+Running Java program...
+✅Build and Test completed successfully!
+Finished: SUCCESS
